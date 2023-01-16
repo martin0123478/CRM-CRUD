@@ -1,3 +1,5 @@
+import {mostrarAlerta} from './funciones.js'
+import { nuevoCliente } from './API.js'
 (function(){
     const formulario = document.querySelector('#formulario')
 
@@ -18,11 +20,11 @@
         }
         if(validar(cliente)){
             //Mostrar mensaje
-            console.log('todos los campos son obligatorio')
+            mostrarAlerta('todos los campos son obligatorio')
             return
         }
-
-        console.log('Si paso la validacion')
+        console.log(cliente)
+        nuevoCliente(cliente)
        
     }
 
